@@ -1,8 +1,13 @@
 @import "mixins.scss";
 @import "animation.scss";
 
+//------------------ Colors ------------------
+
 $textCol: #fbf4bc;
 $dark: #050d54;
+$mainDark: #020737 $main;
+
+//--------------------------------------------
 
 * {
   box-sizing: border-box;
