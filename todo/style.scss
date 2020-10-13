@@ -6,6 +6,7 @@
 
 body {
   background-color: #21215f;
+  color: #fdfac4;
 }
 
 .wrap {
@@ -37,19 +38,63 @@ body {
 }
 
 .btn {
+  outline: none;
   width: 100px;
   min-height: 40px;
   background: #b1d6e9;
   box-shadow: 0px 0px 10px #97b0ef;
   border-radius: 10px;
   cursor: pointer;
+  color: #380fc3;
 }
 
 .list {
   margin-top: 20px;
+  padding: 0.5rem;
   width: 100%;
   min-height: 324px;
   background: #a2a9ea;
   box-shadow: 0px 0px 10px #bbc3ef;
   border-radius: 10px;
+  &-item {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid olive;
+    padding-bottom: 10px;
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+  &-btn {
+    outline: none;
+    box-shadow: 0px 0px 10px #97b0ef;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 0.5em;
+    color: #312a73;
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+}
+.label {
+  padding-left: 20px;
+  flex-grow: 2;
+  position: relative;
+}
+
+[name="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+.done {
+  background-color: #a6e697;
+  cursor: pointer;
+}
+.remove {
+  background-color: #eb8af1;
+  cursor: pointer;
 }
