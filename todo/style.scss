@@ -9,20 +9,21 @@ body {
   color: #fdfac4;
 }
 
-.wrap {
+.todo {
   margin: 30px auto;
   width: 400px;
   box-shadow: 0 0 10px 0 #b1d6e9;
   border-radius: 30px;
-}
-
-.todo {
   min-height: 500px;
   background: #020737;
   border-radius: 30px;
   padding: 2rem;
   &-input {
-    width: 100%;
+    flex-grow: 1;
+    font-size: 0.7rem;
+    color: #020737;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
     height: 2rem;
     border-radius: 10px;
     background: #ddf2d5;
@@ -31,28 +32,28 @@ body {
   }
 }
 
-.btnwrap {
+.input-wrap {
   display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
 }
 
 .btn {
   outline: none;
-  width: 100px;
-  min-height: 40px;
+  padding: 0 0.5rem;
   background: #b1d6e9;
   box-shadow: 0px 0px 10px #97b0ef;
   border-radius: 10px;
   cursor: pointer;
   color: #380fc3;
+  &:hover {
+    animation: hov 0.3s linear;
+  }
 }
 
 .list {
   margin-top: 20px;
   padding: 0.5rem;
   width: 100%;
-  min-height: 324px;
+  min-height: 384px;
   background: #a2a9ea;
   box-shadow: 0px 0px 10px #bbc3ef;
   border-radius: 10px;
@@ -60,41 +61,52 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid olive;
     padding-bottom: 10px;
+    font-size: 0.8em;
     &:not(:first-child) {
       margin-top: 10px;
     }
+    &:not(:last-child) {
+      border-bottom: 1px solid olive;
+    }
   }
   &-btn {
-    outline: none;
-    box-shadow: 0px 0px 10px #97b0ef;
-    border-radius: 10px;
-    cursor: pointer;
-    padding: 0.5em;
+    padding: 0.4em;
     color: #312a73;
+    font-size: 0.8em;
     &:not(:last-child) {
       margin-right: 5px;
     }
   }
 }
-.label {
+
+.text {
   padding-left: 20px;
   flex-grow: 2;
   position: relative;
-}
-
-[name="checkbox"] {
-  position: absolute;
-  left: 0;
-  top: 6px;
 }
 
 .done {
   background-color: #a6e697;
   cursor: pointer;
 }
+
 .remove {
   background-color: #eb8af1;
   cursor: pointer;
+}
+
+@keyframes hov {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-2px);
+  }
+  70% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

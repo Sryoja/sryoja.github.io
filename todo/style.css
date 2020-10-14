@@ -10,15 +10,12 @@ body {
   color: #fdfac4;
 }
 
-.wrap {
+.todo {
   margin: 30px auto;
   width: 400px;
   -webkit-box-shadow: 0 0 10px 0 #b1d6e9;
           box-shadow: 0 0 10px 0 #b1d6e9;
   border-radius: 30px;
-}
-
-.todo {
   min-height: 500px;
   background: #020737;
   border-radius: 30px;
@@ -26,7 +23,13 @@ body {
 }
 
 .todo-input {
-  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 0.7rem;
+  color: #020737;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
   height: 2rem;
   border-radius: 10px;
   background: #ddf2d5;
@@ -35,19 +38,15 @@ body {
   outline: none;
 }
 
-.btnwrap {
+.input-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-top: 20px;
 }
 
 .btn {
   outline: none;
-  width: 100px;
-  min-height: 40px;
+  padding: 0 0.5rem;
   background: #b1d6e9;
   -webkit-box-shadow: 0px 0px 10px #97b0ef;
           box-shadow: 0px 0px 10px #97b0ef;
@@ -56,11 +55,16 @@ body {
   color: #380fc3;
 }
 
+.btn:hover {
+  -webkit-animation: hov 0.3s linear;
+          animation: hov 0.3s linear;
+}
+
 .list {
   margin-top: 20px;
   padding: 0.5rem;
   width: 100%;
-  min-height: 324px;
+  min-height: 384px;
   background: #a2a9ea;
   -webkit-box-shadow: 0px 0px 10px #bbc3ef;
           box-shadow: 0px 0px 10px #bbc3ef;
@@ -76,40 +80,34 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid olive;
   padding-bottom: 10px;
+  font-size: 0.8em;
 }
 
 .list-item:not(:first-child) {
   margin-top: 10px;
 }
 
+.list-item:not(:last-child) {
+  border-bottom: 1px solid olive;
+}
+
 .list-btn {
-  outline: none;
-  -webkit-box-shadow: 0px 0px 10px #97b0ef;
-          box-shadow: 0px 0px 10px #97b0ef;
-  border-radius: 10px;
-  cursor: pointer;
-  padding: 0.5em;
+  padding: 0.4em;
   color: #312a73;
+  font-size: 0.8em;
 }
 
 .list-btn:not(:last-child) {
   margin-right: 5px;
 }
 
-.label {
+.text {
   padding-left: 20px;
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
   position: relative;
-}
-
-[name="checkbox"] {
-  position: absolute;
-  left: 0;
-  top: 6px;
 }
 
 .done {
@@ -120,5 +118,43 @@ body {
 .remove {
   background-color: #eb8af1;
   cursor: pointer;
+}
+
+@-webkit-keyframes hov {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  30% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  70% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes hov {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  30% {
+    -webkit-transform: translateY(-2px);
+            transform: translateY(-2px);
+  }
+  70% {
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 /*# sourceMappingURL=style.css.map */

@@ -7,22 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="wrap">
         <div class="todo">
-            <input type="text" name="text" id="text" class='todo-input'>
-            <div class="btnwrap">
-                <button class="btn">done</button>
-                <button class="btn">restore</button>
-                <button class="btn">remove</button>
-            </div>  
-            <div class="list">
-                <div class="list-item">
-                <label class='label'><input type="checkbox" name="checkbox" id="checkbox">some text</label>
-                <button class='list-btn done'>done</button><button class='list-btn remove'>remove</button>
-                </div>
-                
-            </div>  
+            <div class="input-wrap">
+                <input type="text" name="text" id="input" class='todo-input' placeholder="write your todo">
+                <button class='btn'>add</button>
+            </div>
+            <ul class="list">
+                <li class="list-item">
+                    <p class="text">some text</p>
+                    <button class='list-btn done btn'>done</button>
+                    <button class='list-btn remove btn'>remove</button>
+                </li>
+            </ul>  
         </div>
-    </div>
+    <script src="./script.js"></script>
 </body>
 </html>
