@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -55,7 +56,7 @@ body {
   color: #380fc3;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
   -webkit-animation: hov 0.3s linear;
           animation: hov 0.3s linear;
 }
@@ -81,7 +82,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 10px;
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 
 .list-item:not(:first-child) {
@@ -92,22 +93,23 @@ body {
   border-bottom: 1px solid olive;
 }
 
-.list-btn {
-  padding: 0.4em;
-  color: #312a73;
-  font-size: 0.8em;
-}
-
-.list-btn:not(:last-child) {
-  margin-right: 5px;
-}
-
-.text {
-  padding-left: 20px;
+.list-content {
+  font-family: sans-serif;
+  font-family: "Comfortaa", cursive;
+  padding: 0 20px;
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
   position: relative;
+  overflow: hidden;
+  color: #070115;
+}
+
+.list-btn {
+  padding: 0.4em;
+  color: #312a73;
+  font-size: 0.8em;
+  margin-left: 0.8em;
 }
 
 .done {
@@ -156,5 +158,10 @@ body {
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+}
+
+.taskDone {
+  text-decoration: line-through;
+  opacity: 0.3;
 }
 /*# sourceMappingURL=style.css.map */

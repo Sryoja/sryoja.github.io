@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -44,7 +46,8 @@ body {
   border-radius: 10px;
   cursor: pointer;
   color: #380fc3;
-  &:hover {
+  &:hover,
+  &:focus {
     animation: hov 0.3s linear;
   }
 }
@@ -62,7 +65,7 @@ body {
     justify-content: space-around;
     align-items: center;
     padding-bottom: 10px;
-    font-size: 0.8em;
+    font-size: 0.9em;
     &:not(:first-child) {
       margin-top: 10px;
     }
@@ -70,20 +73,24 @@ body {
       border-bottom: 1px solid olive;
     }
   }
+  &-content {
+    font-family: sans-serif;
+    font-family: "Comfortaa", cursive;
+    padding: 0 20px;
+    flex-grow: 2;
+    position: relative;
+    overflow: hidden;
+    color: #070115;
+  }
   &-btn {
     padding: 0.4em;
     color: #312a73;
     font-size: 0.8em;
-    &:not(:last-child) {
-      margin-right: 5px;
-    }
+    margin-left: 0.8em;
+    // &:not(:last-child) {
+    //   margin-right: 5px;
+    // }
   }
-}
-
-.text {
-  padding-left: 20px;
-  flex-grow: 2;
-  position: relative;
 }
 
 .done {
@@ -109,4 +116,9 @@ body {
   100% {
     transform: translateY(0);
   }
+}
+
+.taskDone {
+  text-decoration: line-through;
+  opacity: 0.3;
 }
