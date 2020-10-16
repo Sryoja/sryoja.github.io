@@ -9,14 +9,15 @@
 body {
   background-color: #21215f;
   color: #fdfac4;
+  height: 100vh;
 }
 
 .todo {
   margin: 30px auto;
-  width: 400px;
+  max-width: 400px;
+  min-height: 500px;
   box-shadow: 0 0 10px 0 #b1d6e9;
   border-radius: 30px;
-  min-height: 500px;
   background: #020737;
   border-radius: 30px;
   padding: 2rem;
@@ -64,13 +65,13 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-bottom: 10px;
     font-size: 0.9em;
     &:not(:first-child) {
       margin-top: 10px;
     }
     &:not(:last-child) {
       border-bottom: 1px solid olive;
+      padding-bottom: 10px;
     }
   }
   &-content {
@@ -122,3 +123,21 @@ body {
   text-decoration: line-through;
   opacity: 0.3;
 }
+
+@media (max-width: 480px) {
+  body,
+  .todo {
+    padding: 1rem;
+    min-height: 100%;
+  }
+
+  .todo {
+    margin: 0 auto;
+  }
+  .list {
+    min-height: 0;
+    &-content {
+      padding: 10px;
+    }
+  }
+} ;
