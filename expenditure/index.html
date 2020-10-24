@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор Расходов</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="main-window">
+        <fieldset class="enter-field fileld-common">
+          <legend>Поля ввода данных</legend>
+          <input
+            type="text"
+            class="text-input enter-text"
+            placeholder="на что потрачено ..."
+            id='text'
+            autocomplete='off'
+          />
+          <input
+            type="text"
+            class="text-input enter-num"
+            placeholder="сумма ..."
+            id='value'
+            autocomplete='off'
+          />
+          <button class="common-btn btn-add" id='btn-add'>приход</button>
+          <button class="common-btn btn-deduct" id='btn-deduct'>расход</button>
+        </fieldset>
+
+        <fieldset class="info-field fileld-common">
+          <legend>текущий баланс:</legend>
+          <span class="balance-value">3600</span>
+        </fieldset>
+
+
+
+        <fieldset class="outro-window fileld-common">
+          <legend>список расхода и прихода</legend>
+          <!-- <div class="list-wrap"> -->
+            <!-- <fieldset class="income-field fileld-common">
+              <legend>приход</legend> -->
+              <ul class="outro-list" id='outro-list'>
+                
+                <li class='list-item'>
+                  <span>дата</span>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta esse repellendus porro dolore aliquid cum numquam recusandae ratione temporibus amet, repudiandae molestias? Quidem unde et, id quas rerum fugiat reiciendis.Illum aperiam modi minus! Totam obcaecati, libero quas omnis dignissimos quia ipsa sunt quae unde modi accusamus autem beatae et hic minus facilis dolorum quidem ullam ducimus mollitia. A, velit.</p>
+                  <span>1235</span>
+                </li>
+                <li class='list-item'>
+                  <span>дата</span>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta esse repellendus porro dolore aliquid cum numquam recusandae ratione temporibus amet, repudiandae molestias? Quidem unde et, id quas rerum fugiat reiciendis.Illum aperiam modi minus! Totam obcaecati, libero quas omnis dignissimos quia ipsa sunt quae unde modi accusamus autem beatae et hic minus facilis dolorum quidem ullam ducimus mollitia. A, velit.</p>
+                  <span>1235</span>
+                </li>
+                
+              </ul>
+            <!-- </fieldset> -->
+            <!-- <fieldset class="expend-field fileld-common">
+              <legend>расход</legend>
+              <ul class="expend-list">
+                <li class='list-item'>
+                <p>продукты</p>
+                <span>1235</span>
+                </li><li class='list-item'>
+                  <p>продукты</p>
+                  <span>1235</span>
+                </li>
+                <li class='list-item'>
+                  <p>продукты какие вкусные продукты я купил сегодня за деньги продукты какие вкусные продукты я купил сегодня за деньги</p>
+                  <span>1235</span>
+                </li>
+                <li class='list-item'>
+                  <p>продукты</p>
+                  <span>1235</span>
+                </li>
+              </ul>
+          </div>
+        </fieldset> -->
+      <!-- </div> -->
+    </section>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
