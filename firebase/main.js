@@ -28,13 +28,11 @@ function setData(data) {
         headers: {
             'Content-Type': 'application/json'
         }
-    })
-        .then(response => response.json())
-        .then(response => {
-            data.id = response.name
-            return data
-        })
-        .then(data => addItem(data))
+    }).then(response => response.json()
+    ).then(response => {
+        data.id = response.name
+        return data
+    }).then(data => addItem(data))
 }
 
 function addItem(data) {

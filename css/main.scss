@@ -1,11 +1,11 @@
-@import "mixins.scss";
-@import "animation.scss";
+@import 'mixins.scss';
+@import 'animation.scss';
 
 //------------------ Colors ------------------
 
-$textCol: #fbf4bc;
+$textCol: #fff9cc;
 $dark: #050d54;
-$mainDark: #020737 $main;
+$mainDark: #020737;
 
 //--------------------------------------------
 
@@ -34,7 +34,7 @@ a {
 }
 
 body {
-  font-family: "Indie Flower", cursive;
+  font-family: 'Montserrat', sans-serif;
   color: $textCol;
   padding: 0;
   margin: 0;
@@ -43,9 +43,9 @@ body {
   background-attachment: fixed;
   display: grid;
   grid-template-areas:
-    "mainHeader mainHeader"
-    "mainAside mainContent"
-    "mainFooter mainFooter";
+    'mainHeader mainHeader'
+    'mainAside mainContent'
+    'mainFooter mainFooter';
   grid-template-columns: 1fr 7fr;
   grid-gap: 1.5rem;
 }
@@ -164,31 +164,41 @@ body {
   padding: 1rem 0 0 1rem;
   height: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
 }
 
 .article {
   @include border;
-  width: 120px;
+  // width: 120px;
   padding: 1rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
   &__title {
-    text-align: center;
+    min-width: 20%;
+    align-self: center;
+    // text-align: center;
+  }
+  &__desc {
+    margin: 0 10px 0 10px;
   }
   &__link {
     outline: none;
     overflow: hidden;
     position: relative;
     display: block;
+    min-width: 10%;
     box-shadow: 0 0 7px 0 rgba(102, 114, 222, 0.8);
     padding: 0.5em;
     text-align: center;
-    margin-top: 0.7em;
+    align-self: center;
+    // margin-top: 0.7em;
     border-radius: 0.7em;
     color: #79a7dc;
     cursor: pointer;
@@ -224,7 +234,7 @@ body {
 
 .footer {
   grid-area: mainFooter;
-  padding: 0 1rem;
+  padding: 0 1rem 1rem 1rem;
 }
 .footerWrap {
   @include border;
