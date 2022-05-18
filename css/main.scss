@@ -1,5 +1,5 @@
-@import 'mixins.scss';
-@import 'animation.scss';
+@import "mixins.scss";
+@import "animation.scss";
 
 //------------------ Colors ------------------
 
@@ -34,25 +34,32 @@ a {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
   color: $textCol;
   padding: 0;
   margin: 0;
   background: #102329 url(../img/smoke3.jpg) no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  display: grid;
-  grid-template-areas:
-    'mainHeader mainHeader'
-    'mainAside mainContent'
-    'mainFooter mainFooter';
-  grid-template-columns: 1fr 7fr;
-  grid-gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  // display: grid;
+  // grid-template-areas:
+  //   'mainHeader mainHeader'
+  //   'mainAside mainContent'
+  //   'mainFooter mainFooter';
+  // grid-template-columns: 1fr 7fr;
+  // grid-gap: 1.5rem;
 }
 
 //--------------------------- Header -----------------------------
 
 .headerWrap {
+  max-width: 1200px;
+  margin: 0 auto;
   @include border;
   display: flex;
   justify-content: space-between;
@@ -62,7 +69,7 @@ body {
 .header {
   grid-area: mainHeader;
   padding: 0 1rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   &List {
     display: flex;
     justify-content: flex-start;
@@ -156,17 +163,17 @@ body {
 //-------------------------- Content -------------------------------
 
 .content {
-  padding-right: 1rem;
-  grid-area: mainContent;
+  margin: 1rem 0 1rem 0;
+  flex-grow: 1;
 }
 .contentWrap {
+  max-width: 1200px;
+  margin: 0 auto;
   @include border;
   padding: 1rem 0 0 1rem;
   height: 100%;
   display: flex;
   flex-direction: column;
-  // flex-wrap: wrap;
-  // justify-content: space-between;
 }
 
 .article {
@@ -213,10 +220,10 @@ body {
 
     & > span {
       position: absolute;
-      height: 280%;
-      width: 130%;
-      top: -80%;
-      right: -15%;
+      height: 160px;
+      width: 160px;
+      bottom: -60px;
+      left: -20px;
       z-index: -1;
       background: linear-gradient(
         130deg,
@@ -233,10 +240,18 @@ body {
 //-------------------------- Footer ----------------------------
 
 .footer {
-  grid-area: mainFooter;
-  padding: 0 1rem 1rem 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  &__list {
+    &-item {
+      list-style: none;
+    }
+  }
 }
 .footerWrap {
+  max-width: 1200px;
+  margin: 0 auto;
   @include border;
   padding: 1rem;
+  text-align: center;
 }
