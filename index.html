@@ -1,118 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Cite</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/css/normalize.css" />
-    <link rel="stylesheet" href="/css/main.css" />
-    <script src="main.js" defer></script>
-  </head>
-
-  <body>
-    <header class="header">
-      <div class="headerWrap">
-        <a class="header-imgLink" href="https://vk.com/dodzeek"
-          ><img src="/img/foto1.jpg" alt="my foto"
-        /></a>
-        <h2 class="header__title">SerYoja</h2>
-        <div class="headerListWrap"><button id="menuBtn"><span></span></button>
-          <ul class="headerList">
-            <li class="headerList-item">
-              <a href="#" class="headerList-link">Item 1</a>
-            </li>
-            <li class="headerList-item">
-              <a href="#" class="headerList-link">Item 2</a>
-            </li>
-            <li class="headerList-item">
-              <a href="#" class="headerList-link">Item 2</a>
-            </li>
-            <li class="headerList-item">
-              <a href="#" class="headerList-link">Item 3</a>
-            </li>
-          </ul>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <script src="js/main.js" defer="defer"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <a href="#" class="header__foto"><img src="#" alt="myFoto"></a>
+            <div class="header__hello hello">
+                <h1 class="hello__title">Hi! My name is Sergey</h1>
+                <p class="hello__text">I am a beginner web developer and this is my cite. </p>
+            </div>
+        </header>
+        
+        <main class="main">
+            <aside class="aside" data-tooltip="sorting doesn't work yet (:">
+                <ul class="aside__list">
+                    <li class="aside__item"><a href="#" class="aside__link">html</a></li>
+                    <li class="aside__item"><a href="#" class="aside__link">css</a></li>
+                    <li class="aside__item"><a href="#" class="aside__link">js</a></li>
+                    <li class="aside__item"><a href="#" class="aside__link">vue js</a></li>
+                    <li class="aside__item"><a href="#" class="aside__link">react js</a></li>
+                </ul>
+            </aside>
+            <section class="myworks">
+                <h2 class="myworks__title">My works</h2>
+                <div class="myworks__gallery gallery">
+                    <ul class="gallery__items">
+                         <li class="gallery__item item">
+                            <img src="img/html2.png" width="40" height="40" class="gallery__item-icon">
+                            <div class="item__content">
+                                <h3 class="item__title">Glaccy Shop</h3>
+                                <p class="item_desc">HTML Academy graduation project</p>
+                            </div>
+                            <div class="item__bg-text">HTML</div>
+                            <a href="projects/GlaccyShop/index.html" class="item__link">go to</a>
+                        </li>
+                         <li class="gallery__item item">
+                            <img src="img/js.png" width="40" height="40" class="gallery__item-icon">
+                            <div class="item__content">
+                                <h3 class="item__title">To Do</h3>
+                                <p class="item_desc">A simple ToDo app.</p>
+                            </div>
+                            <div class="item__bg-text">JS</div>
+                            <a href="projects/todo/index.html" class="item__link">go to</a>
+                        </li>
+                         <li class="gallery__item item">
+                            <img src="img/js.png" width="40" height="40" class="gallery__item-icon">
+                            <div class="item__content">
+                                <h3 class="item__title">Expense Manager</h3>
+                                <p class="item_desc">expense calculator app.</p>
+                            </div>
+                            <div class="item__bg-text">JS</div>
+                            <a href="projects/expenditure/index.html" class="item__link">go to</a>
+                        </li>
+                         <li class="gallery__item item">
+                            <img src="img/html2.png" width="40" height="40" class="gallery__item-icon">
+                            <div class="item__content">
+                                <h3 class="item__title">Nyamushka</h3>
+                                <p class="item_desc">interview test task.</p>
+                            </div>
+                            <div class="item__bg-text">HTML</div>
+                            <a href="projects/nyamushka/index.html" class="item__link">go to</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <ul class="footer__links">
+                <li class="footer__links-item">
+                    <object class="footer__links-img" type="image/svg+xml" data="img/github.svg" width="30" height="30">
+                        Your browser does not support SVG
+                     </object>
+                    <a href="https://github.com/Sryoja" class="footer__links-link">github</a></li>
+                <li class="footer__links-item">
+                    <object class="footer__links-img" type="image/svg+xml" data="img/vk.svg" width="30" height="30">
+                        Your browser does not support SVG
+                     </object>
+                    <a href="https://vk.com/id18570062" class="footer__links-link">vk.com</a></li>
+            </ul>
+        </footer>
     </div>
-    </header>
-    <!-- <aside class="aside">
-      <div class="asideWrap">
-        <ul class="aside__menu">
-          <li class="aside__menu-item">
-            <a href="#" class="aside__menu-link">Link 1</a>
-          </li>
-          <li class="aside__menu-item">
-            <a href="#" class="aside__menu-link">Link 2</a>
-          </li>
-          <li class="aside__menu-item">
-            <a href="#" class="aside__menu-link">Link 3</a>
-          </li>
-          <li class="aside__menu-item">
-            <a href="#" class="aside__menu-link">Link 4</a>
-          </li>
-          <li class="aside__menu-item">
-            <a href="#" class="aside__menu-link">Link 5</a>
-          </li>
-        </ul>
-      </div>
-    </aside> -->
-    <main class="content">
-      <div class="contentWrap">
-        <article class="article">
-          <h3 class="article__title">GlaccyShop</h3>
-          <p class="article__desc">
-            Финальный макет с курса по верстке HTML academy
-          </p>
-          <a href="/GlaccyShop/index.html" class="article__link"
-            >go to<span></span
-          ></a>
-        </article>
-        <article class="article">
-          <h3 class="article__title">TO DO List</h3>
-          <p class="article__desc">
-            ToDo приложение на JavaScript. 
-          </p>
-          <a href="/todo/index.html" class="article__link"
-            >go to<span></span
-          ></a>
-        </article>
-        <article class="article">
-          <h3 class="article__title">Expedenture App</h3>
-          <p class="article__desc">
-            Приложение для подсчета расходов на JavaScript. 
-          </p>
-          <a href="/expenditure/index.html" class="article__link"
-            >go to<span></span
-          ></a>
-        </article>
-        <article class="article">
-          <h3 class="article__title">Skewed Box</h3>
-          <p class="article__desc">интересное оформление карточек. HTML, CSS</p>
-          <a href="/SkewedBorder/index.html" class="article__link"
-            >go to<span></span
-          ></a>
-        </article>
-        <article class="article">
-          <h3 class="article__title">Нямушка</h3>
-          <p class="article__desc">тестовое задание при устройстве</p>
-          <a href="nyamushka/index.html" class="article__link"
-            >go to<span></span
-          ></a>
-        </article>
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="footerWrap">
-        <ul class="footer__list">
-          <li class="footer__list-item">Данный сайт находится в процессе разработки и корректировки</li>
-          <li class="footer__list-item">Данный сайт не претендует на шедевр дизайнерской мысли</li>
-        </ul>
-      </div>
-    </footer>
-  </body>
+</body>
 </html>

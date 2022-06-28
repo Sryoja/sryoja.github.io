@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #21215f;
+  color: #fdfac4;
+  height: 100vh;
+}
+
+.todo {
+  margin: 30px auto;
+  max-width: 400px;
+  min-height: 500px;
+  box-shadow: 0 0 10px 0 #b1d6e9;
+  border-radius: 30px;
+  background: #020737;
+  border-radius: 30px;
+  padding: 2rem;
+}
+.todo-input {
+  flex-grow: 1;
+  font-size: 0.7rem;
+  color: #020737;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  height: 2rem;
+  border-radius: 10px;
+  background: #ddf2d5;
+  box-shadow: 0px 0px 10px #bbc3ef;
+  outline: none;
+}
+
+.input-wrap {
+  display: flex;
+}
+
+.btn {
+  outline: none;
+  padding: 0 0.5rem;
+  background: #b1d6e9;
+  box-shadow: 0px 0px 10px #97b0ef;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #380fc3;
+}
+.btn:hover, .btn:focus {
+  animation: hov 0.3s linear;
+}
+
+.list {
+  margin-top: 20px;
+  padding: 0.5rem;
+  width: 100%;
+  min-height: 384px;
+  background: #a2a9ea;
+  box-shadow: 0px 0px 10px #bbc3ef;
+  border-radius: 10px;
+}
+.list-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.9em;
+}
+.list-item:not(:first-child) {
+  margin-top: 10px;
+}
+.list-item:not(:last-child) {
+  border-bottom: 1px solid olive;
+  padding-bottom: 10px;
+}
+.list-content {
+  font-family: sans-serif;
+  font-family: "Comfortaa", cursive;
+  padding: 0 20px;
+  flex-grow: 2;
+  position: relative;
+  overflow: hidden;
+  color: #070115;
+}
+.list-btn {
+  padding: 0.4em;
+  color: #312a73;
+  font-size: 0.8em;
+  margin-left: 0.8em;
+}
+
+.done {
+  background-color: #a6e697;
+  cursor: pointer;
+}
+
+.remove {
+  background-color: #eb8af1;
+  cursor: pointer;
+}
+
+@keyframes hov {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-2px);
+  }
+  70% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.taskDone {
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+
+@media (max-width: 480px) {
+  body,
+.todo {
+    padding: 1rem;
+    min-height: 100%;
+  }
+
+  .todo {
+    margin: 0 auto;
+  }
+
+  .list {
+    min-height: 0;
+  }
+  .list-content {
+    padding: 10px;
+  }
+}
