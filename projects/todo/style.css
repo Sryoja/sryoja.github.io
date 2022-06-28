@@ -9,11 +9,13 @@ body {
   background-color: #21215f;
   color: #fdfac4;
   height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .todo {
-  margin: 30px auto;
-  max-width: 400px;
+  width: 400px;
   min-height: 500px;
   box-shadow: 0 0 10px 0 #b1d6e9;
   border-radius: 30px;
