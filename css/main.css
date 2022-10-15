@@ -172,16 +172,15 @@ body {
   text-align: center;
 }
 
-.gallery {
-  padding-left: 30px;
-}
-
 .gallery__items {
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 13.75rem);
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, 13.75em);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .gallery__item-icon {
@@ -195,7 +194,7 @@ body {
 
 .item {
   position: relative;
-  min-height: 22rem;
+  min-height: 22em;
   background: #060c21;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,7 +208,7 @@ body {
   border: 1px solid #000;
   padding-top: 60%;
   padding-bottom: 80px;
-  font-size: 1rem;
+  font-size: 1em;
 }
 
 .item::before {
@@ -304,7 +303,7 @@ body {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  padding: 10px 30px;
+  padding: 0.5em 1em;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 0.9em;
@@ -402,4 +401,79 @@ body {
   -ms-transform: scale(1.1);
   transform: scale(1.1);
   text-decoration: underline;
+}
+
+@media (max-width: 832px) {
+  .hello__title {
+    font-size: 1.5em;
+  }
+
+  .hello__text {
+    font-size: 0.8em;
+  }
+
+  .gallery__items {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 781px) {
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .aside__list {
+    padding: 0;
+    margin-bottom: 20px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .aside__item {
+    margin: 0;
+  }
+
+  .aside {
+    padding: 0;
+  }
+
+  .gallery__items {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .footer__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
